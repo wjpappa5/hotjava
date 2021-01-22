@@ -9,7 +9,7 @@ function init() {
   // Grab a reference to the dropdown select element
   // Use the list of sample names to populate the select options
   d3.json("/samples").then((data) => {
-    data.names.forEach(name => {
+    data.names.map(name => {
       d3.select('#selDataset').append('option').attr('value', name).text(name);
     })
     buildChart(data);
