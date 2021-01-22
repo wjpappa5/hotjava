@@ -89,7 +89,7 @@ function buildMetadata(data){
     sampleMetadata.html('');
     var table = sampleMetadata.append('table');
     table.attr('class', 'table table-striped')
-    Object.entries(targetSample).forEach(([key, value]) => {
+    Object.entries(targetSample).map(([key, value]) => {
       var row = table.append('tr');
       var cell = row.append('td');
       cell.text(`${key}:`);
